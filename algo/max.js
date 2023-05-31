@@ -1,21 +1,16 @@
-function find_max_num(array)
+function find_max_num(a)
 {
-    let i = 0;
-    let alp = [];
-    let map1 = new Map();
-    let str;
-    array.split("");
-    for(i; i<array.length; i++)
-    {
-        map1.set(array[i], 1);
-            if(array[i] == array[i+1])
-            {
-                let value1 = map1.values(array[i]);
-                console.log(value1)
-                map1.set(array[i], value1+1);
-            }
-    }
-    return map1;
+    let str = a;
+    let arr = str.split("");
+    const result = {};
+
+    arr.forEach((x) => {
+        console.log(x)
+        result[x] = (result[x] || 0) + 1;
+        console.log(result[x])
+    });
+
+  return result;
 }
 
 console.log(find_max_num("aaabbcc"))
