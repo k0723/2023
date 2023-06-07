@@ -35,7 +35,7 @@
                                                 <h5 class="card-title">${title}</h5>
                                                 <p class="card-text">${desc}</p>
                                                 <p class="mycomment">${comment}</p>
-                                                <p id="movieId">${id}</p>
+                                                <p class="movieId">${id}</p>
                                             </div>
                                         </div>
                                 </div>`
@@ -48,7 +48,7 @@
 
 
     function search() {
-        var searchText1 = document.getElementById("searchText").value;
+        let searchText1 = document.getElementById("searchText").value;
         console.log(searchText1)
         fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1',options)
         .then(res => res.json())
@@ -72,7 +72,7 @@
                                                     <h5 class="card-title">${title}</h5>
                                                     <p class="card-text">${desc}</p>
                                                     <p class="mycomment">${comment}</p>
-                                                    <p id="movieId">${id}</p>
+                                                    <p class="movieId">${id}</p>
                                                 </div>
                                             </div>
                                         </div>`
